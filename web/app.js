@@ -56,7 +56,99 @@ map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bott
 
 const statusEl = document.getElementById("status");
 const popupEl = document.getElementById("popup");
+const dateInput = document.getElementById("rafah-date");
+const imageryNote = document.getElementById("imagery-note");
+const MODIS_START = "2000-02-24";
 let heightScale = 1;
+let releases = [];
+
+const releasesReady = fetch(
+  "https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json",
+)
+  .then((response) => response.json())
+  .then((data) => {
+    releases = Object.entries(data)
+      .map(([id, item]) => {
+        const match = String(item.itemTitle || "").match(/(\d{4}-\d{2}-\d{2})/);
+        return match ? { id, date: match[1] } : null;
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.date.localeCompare(b.date));
+  })
+  .catch((error) => {
+    console.error(error);
+    imageryNote.textContent = "Historical photos could not be loaded.";
+  });
+
+function formatDate(iso) {
+  const [year, month, day] = iso.split("-").map(Number);
+  return new Date(Date.UTC(year, month - 1, day)).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+function replaceSatellite(tiles, maxzoom) {
+  if (!map.getSource("satellite")) return;
+  const visible = map.getLayoutProperty("satellite", "visibility") || "visible";
+  map.removeLayer("satellite");
+  map.removeSource("satellite");
+  map.addSource("satellite", {
+    type: "raster",
+    tiles,
+    tileSize: 256,
+    maxzoom,
+    attribution: "Imagery © Esri, NASA",
+  });
+  const before = map.getLayer("streets") ? "streets" : undefined;
+  map.addLayer(
+    { id: "satellite", type: "raster", source: "satellite", layout: { visibility: visible } },
+    before,
+  );
+}
+
+function applyImageryDate(iso) {
+  if (!releases.length) return;
+  const firstDetailed = releases[0];
+  const latest = releases[releases.length - 1];
+  if (iso < firstDetailed.date) {
+    const day = iso < MODIS_START ? MODIS_START : iso;
+    replaceSatellite(
+      [
+        `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/${day}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg`,
+      ],
+      9,
+    );
+    imageryNote.textContent =
+      iso < MODIS_START
+        ? `First photo is ${formatDate(MODIS_START)}.`
+        : `Wide view ${formatDate(day)}. Close photos start ${formatDate(firstDetailed.date)}.`;
+    setLayerVisibility("buildings-3d", false);
+    setLayerVisibility("roads-line", false);
+    if (map.getZoom() > 10) map.easeTo({ center: CITY.center, zoom: 9, pitch: 40, bearing: 0, duration: 800 });
+    return;
+  }
+  let chosen = firstDetailed;
+  for (const release of releases) {
+    if (release.date <= iso) chosen = release;
+    else break;
+  }
+  replaceSatellite(
+    [
+      `https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/${chosen.id}/{z}/{y}/{x}`,
+    ],
+    19,
+  );
+  imageryNote.textContent =
+    chosen.date === latest.date && iso >= latest.date
+      ? `Latest photo ${formatDate(chosen.date)}.`
+      : `Photo ${formatDate(chosen.date)}.`;
+  setLayerVisibility("buildings-3d", document.getElementById("layer-buildings").checked);
+  setLayerVisibility("roads-line", document.getElementById("layer-roads").checked);
+  if (map.getZoom() < 12) map.easeTo({ ...CITY, duration: 800 });
+}
 
 function visibility(on) {
   return on ? "visible" : "none";
@@ -176,6 +268,9 @@ map.on("load", async () => {
     map.on("mouseleave", "buildings-3d", () => {
       map.getCanvas().style.cursor = "";
     });
+
+    await releasesReady;
+    applyImageryDate(dateInput.value);
   } catch (error) {
     statusEl.textContent = "Map data is still downloading. Refresh in a moment.";
     console.error(error);
@@ -221,6 +316,8 @@ document.getElementById("height-scale").addEventListener("input", (event) => {
     map.setPaintProperty("buildings-3d", "fill-extrusion-height", ["*", ["get", "height_m"], heightScale]);
   }
 });
+
+dateInput.addEventListener("change", () => applyImageryDate(dateInput.value));
 
 document.getElementById("view-city").addEventListener("click", () => map.easeTo({ ...CITY, duration: 1200 }));
 document.getElementById("view-gov").addEventListener("click", () => map.easeTo({ ...GOVERNORATE, duration: 1200 }));

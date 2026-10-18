@@ -18,6 +18,12 @@
       <h1>Rafah <span lang="ar">رفح</span></h1>
       <p class="sub" id="status">Loading Rafah…</p>
 
+      <label class="date-field">
+        <span>Rafah date</span>
+        <input id="rafah-date" type="date" min="2000-01-01" max="2026-10-18" value="2026-10-18" />
+        <p id="imagery-note" class="date-note">Loading photos…</p>
+      </label>
+
       <div class="toggles">
         <label><input id="layer-satellite" type="checkbox" checked /> Satellite</label>
         <label><input id="layer-streets" type="checkbox" /> Streets</label>
@@ -51,10 +57,11 @@
       Elevation from AWS Terrain Tiles (Terrarium).
       Layer list follows the
       <a href="https://data.nextgis.com/en/data-samples/#formats-base">NextGIS data samples</a>
-      catalog. Drag to look around. Right-drag or two fingers to tilt.
+      catalog. The date changes the satellite photo. Buildings and roads are the current map.
+      Drag to look around. Right-drag or two fingers to tilt.
     </footer>
 
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=3"></script>
+    <script src="app.js?v=5"></script>
   </body>
 </html>

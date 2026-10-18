@@ -74,6 +74,31 @@ h1 span {
   line-height: 1.4;
 }
 
+.date-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+input[type="date"] {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font: 13px "Avenir Next", "Segoe UI", sans-serif;
+}
+
+.date-note {
+  margin: 0;
+  line-height: 1.35;
+}
+
 .toggles {
   display: grid;
   grid-template-columns: 1fr 1fr;
