@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "building-point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "BUILDING": "yes", "ADDR_CITY": null, "A_STRT": null, "A_SBRB": null, "A_HSNMBR": null, "A_PLACE": null, "A_PSTCD": null, "B_LEVELS": null, "NAME": "Gare de Diarrabakoko", "NAME_EN": null, "OSM_TYPE": "node", "OSM_ID": 4065449448 }, "geometry": { "type": "Point", "coordinates": [ -4.78367, 10.4706873 ] } },
+{ "type": "Feature", "properties": { "BUILDING": "yes", "ADDR_CITY": null, "A_STRT": null, "A_SBRB": null, "A_HSNMBR": null, "A_PLACE": null, "A_PSTCD": null, "B_LEVELS": null, "NAME": "Ministere des Enseignements Secondaire et Superieur - Region des Cascades - Direction Regional des Cascade", "NAME_EN": null, "OSM_TYPE": "node", "OSM_ID": 4490653672 }, "geometry": { "type": "Point", "coordinates": [ -4.7486957, 10.6483238 ] } },
+{ "type": "Feature", "properties": { "BUILDING": "yes", "ADDR_CITY": null, "A_STRT": null, "A_SBRB": null, "A_HSNMBR": null, "A_PLACE": null, "A_PSTCD": null, "B_LEVELS": null, "NAME": "mosquée du secteur 4", "NAME_EN": null, "OSM_TYPE": "node", "OSM_ID": 6359022885 }, "geometry": { "type": "Point", "coordinates": [ -4.7546264, 10.6336217 ] } },
+{ "type": "Feature", "properties": { "BUILDING": "shrine", "ADDR_CITY": null, "A_STRT": null, "A_SBRB": null, "A_HSNMBR": null, "A_PLACE": null, "A_PSTCD": null, "B_LEVELS": null, "NAME": null, "NAME_EN": null, "OSM_TYPE": "node", "OSM_ID": 7522735492 }, "geometry": { "type": "Point", "coordinates": [ -4.7318834, 10.6378038 ] } }
+]
+}

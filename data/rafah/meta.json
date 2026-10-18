@@ -1,0 +1,25 @@
+{
+  "place": "Rafah Governorate",
+  "place_ar": "محافظة رفح",
+  "osm_relation": 4731201,
+  "bbox": {
+    "south": 31.2201289,
+    "west": 34.2158979,
+    "north": 31.34577,
+    "east": 34.329407
+  },
+  "center": [
+    34.248,
+    31.287
+  ],
+  "fetched": "2026-10-18",
+  "counts": {
+    "buildings": 10589,
+    "roads": 3145
+  },
+  "sources": {
+    "vector": "OpenStreetMap via the Overpass API",
+    "elevation": "AWS Terrain Tiles, Terrarium encoding (SRTM and related DEMs)",
+    "catalog": "https://data.nextgis.com/en/data-samples/#formats-base"
+  }
+}

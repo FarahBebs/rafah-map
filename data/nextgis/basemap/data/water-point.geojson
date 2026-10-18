@@ -1,0 +1,19 @@
+{
+"type": "FeatureCollection",
+"name": "water-point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "NAME": "Chestnut Hill Reservoir Dam", "NAME_EN": null, "NATURAL": null, "WATERWAY": "dam", "OSM_TYPE": "node", "OSM_ID": 358267463 }, "geometry": { "type": "Point", "coordinates": [ -71.1540885, 42.3357671 ] } },
+{ "type": "Feature", "properties": { "NAME": null, "NAME_EN": null, "NATURAL": null, "WATERWAY": "lock_gate", "OSM_TYPE": "node", "OSM_ID": 981639327 }, "geometry": { "type": "Point", "coordinates": [ -71.0619185, 42.3685747 ] } },
+{ "type": "Feature", "properties": { "NAME": null, "NAME_EN": null, "NATURAL": null, "WATERWAY": "lock_gate", "OSM_TYPE": "node", "OSM_ID": 981639487 }, "geometry": { "type": "Point", "coordinates": [ -71.0616454, 42.3684309 ] } },
+{ "type": "Feature", "properties": { "NAME": null, "NAME_EN": null, "NATURAL": null, "WATERWAY": "s", "OSM_TYPE": "node", "OSM_ID": 1001700761 }, "geometry": { "type": "Point", "coordinates": [ -71.067996900000011, 42.3856862 ] } },
+{ "type": "Feature", "properties": { "NAME": null, "NAME_EN": null, "NATURAL": null, "WATERWAY": "lock_gate", "OSM_TYPE": "node", "OSM_ID": 1326621855 }, "geometry": { "type": "Point", "coordinates": [ -71.0608742, 42.3685571 ] } },
+{ "type": "Feature", "properties": { "NAME": null, "NAME_EN": null, "NATURAL": null, "WATERWAY": "access_point", "OSM_TYPE": "node", "OSM_ID": 7683105742 }, "geometry": { "type": "Point", "coordinates": [ -71.0796384, 42.3548183 ] } },
+{ "type": "Feature", "properties": { "NAME": null, "NAME_EN": null, "NATURAL": null, "WATERWAY": "lock_gate", "OSM_TYPE": "node", "OSM_ID": 7782496097 }, "geometry": { "type": "Point", "coordinates": [ -71.0616092, 42.3682624 ] } },
+{ "type": "Feature", "properties": { "NAME": "Harbor Fuels", "NAME_EN": null, "NATURAL": null, "WATERWAY": "fuel", "OSM_TYPE": "node", "OSM_ID": 7846771464 }, "geometry": { "type": "Point", "coordinates": [ -71.0342966, 42.3639428 ] } },
+{ "type": "Feature", "properties": { "NAME": null, "NAME_EN": null, "NATURAL": null, "WATERWAY": "lock_gate", "OSM_TYPE": "node", "OSM_ID": 7926481825 }, "geometry": { "type": "Point", "coordinates": [ -71.0608254, 42.3683901 ] } },
+{ "type": "Feature", "properties": { "NAME": null, "NAME_EN": null, "NATURAL": null, "WATERWAY": "lock_gate", "OSM_TYPE": "node", "OSM_ID": 7926481830 }, "geometry": { "type": "Point", "coordinates": [ -71.06072660000001, 42.3687682 ] } },
+{ "type": "Feature", "properties": { "NAME": null, "NAME_EN": null, "NATURAL": null, "WATERWAY": "access_point", "OSM_TYPE": "node", "OSM_ID": 12945304423 }, "geometry": { "type": "Point", "coordinates": [ -71.0902348, 42.3521013 ] } },
+{ "type": "Feature", "properties": { "NAME": null, "NAME_EN": null, "NATURAL": null, "WATERWAY": "access_point", "OSM_TYPE": "node", "OSM_ID": 13326304278 }, "geometry": { "type": "Point", "coordinates": [ -71.1862686, 42.28026 ] } }
+]
+}

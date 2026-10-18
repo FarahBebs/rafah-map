@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"name": "settlement-point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "NAME": "Boston", "NAME_EN": "Boston", "INT_NAME": null, "OFFICIAL_S": null, "PLACE": "city", "A_CNTR": null, "A_RGN": null, "A_DSTRCT": null, "A_PSTCD": null, "POPULATION": "675647", "OSM_TYPE": "node", "OSM_ID": 158809705 }, "geometry": { "type": "Point", "coordinates": [ -71.0578303, 42.3588336 ] } },
+{ "type": "Feature", "properties": { "NAME": "Fort Warren", "NAME_EN": null, "INT_NAME": null, "OFFICIAL_S": null, "PLACE": "hamlet", "A_CNTR": null, "A_RGN": null, "A_DSTRCT": null, "A_PSTCD": null, "POPULATION": null, "OSM_TYPE": "node", "OSM_ID": 158856419 }, "geometry": { "type": "Point", "coordinates": [ -70.9286584, 42.3195432 ] } },
+{ "type": "Feature", "properties": { "NAME": "Shawmut Junction", "NAME_EN": null, "INT_NAME": null, "OFFICIAL_S": null, "PLACE": "locality", "A_CNTR": null, "A_RGN": null, "A_DSTRCT": null, "A_PSTCD": null, "POPULATION": null, "OSM_TYPE": "node", "OSM_ID": 1078425990 }, "geometry": { "type": "Point", "coordinates": [ -71.05930450000001, 42.2745068 ] } },
+{ "type": "Feature", "properties": { "NAME": "Independence Wharf", "NAME_EN": null, "INT_NAME": null, "OFFICIAL_S": null, "PLACE": "locality", "A_CNTR": null, "A_RGN": null, "A_DSTRCT": null, "A_PSTCD": null, "POPULATION": null, "OSM_TYPE": "node", "OSM_ID": 3188737186 }, "geometry": { "type": "Point", "coordinates": [ -71.0515678, 42.3542713 ] } },
+{ "type": "Feature", "properties": { "NAME": "Sullivan Square", "NAME_EN": null, "INT_NAME": null, "OFFICIAL_S": null, "PLACE": "locality", "A_CNTR": null, "A_RGN": null, "A_DSTRCT": null, "A_PSTCD": null, "POPULATION": null, "OSM_TYPE": "node", "OSM_ID": 7613313775 }, "geometry": { "type": "Point", "coordinates": [ -71.07353, 42.3846447 ] } },
+{ "type": "Feature", "properties": { "NAME": "Adams Square", "NAME_EN": null, "INT_NAME": null, "OFFICIAL_S": null, "PLACE": "locality", "A_CNTR": null, "A_RGN": null, "A_DSTRCT": null, "A_PSTCD": null, "POPULATION": null, "OSM_TYPE": "node", "OSM_ID": 7629903523 }, "geometry": { "type": "Point", "coordinates": [ -71.057448900000011, 42.3604093 ] } },
+{ "type": "Feature", "properties": { "NAME": "South Bay Interchange", "NAME_EN": null, "INT_NAME": null, "OFFICIAL_S": null, "PLACE": "locality", "A_CNTR": null, "A_RGN": null, "A_DSTRCT": null, "A_PSTCD": null, "POPULATION": null, "OSM_TYPE": "node", "OSM_ID": 10568416462 }, "geometry": { "type": "Point", "coordinates": [ -71.0602159, 42.3465663 ] } }
+]
+}

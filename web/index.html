@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rafah — 3D map</title>
+    <link
+      href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=2" />
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <header class="panel">
+      <p class="eyebrow">3D map</p>
+      <h1>Rafah <span lang="ar">رفح</span></h1>
+      <p class="sub" id="status">Loading Rafah…</p>
+
+      <div class="toggles">
+        <label><input id="layer-satellite" type="checkbox" checked /> Satellite</label>
+        <label><input id="layer-streets" type="checkbox" /> Streets</label>
+        <label><input id="layer-buildings" type="checkbox" checked /> Buildings</label>
+        <label><input id="layer-roads" type="checkbox" checked /> Roads</label>
+        <label><input id="layer-boundary" type="checkbox" checked /> Boundary</label>
+        <label><input id="layer-terrain" type="checkbox" checked /> Terrain</label>
+      </div>
+
+      <label class="slider">
+        <span>Terrain relief <output id="terrain-out">2.2</output></span>
+        <input id="terrain-scale" type="range" min="1" max="4" step="0.1" value="2.2" />
+      </label>
+      <label class="slider">
+        <span>Building height <output id="height-out">1.0</output></span>
+        <input id="height-scale" type="range" min="0.4" max="2.5" step="0.1" value="1" />
+      </label>
+
+      <div class="actions">
+        <button id="view-city" type="button">City</button>
+        <button id="view-gov" type="button">Governorate</button>
+        <button id="tilt" type="button">Tilt</button>
+      </div>
+    </header>
+
+    <aside id="popup" class="popup" hidden></aside>
+
+    <footer class="credits">
+      Buildings, roads, and boundary from
+      <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>.
+      Elevation from AWS Terrain Tiles (Terrarium).
+      Layer list follows the
+      <a href="https://data.nextgis.com/en/data-samples/#formats-base">NextGIS data samples</a>
+      catalog. Drag to look around. Right-drag or two fingers to tilt.
+    </footer>
+
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="app.js?v=3"></script>
+  </body>
+</html>

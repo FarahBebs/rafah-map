@@ -1,0 +1,28 @@
+{
+"type": "FeatureCollection",
+"name": "port-point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "NAME": "World Trade Center (West) Ferry Terminal", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 1143179109 }, "geometry": { "type": "Point", "coordinates": [ -71.0414946, 42.3512161 ] } },
+{ "type": "Feature", "properties": { "NAME": "Rowes Wharf Ferry Terminal", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 1146549951 }, "geometry": { "type": "Point", "coordinates": [ -71.0496805, 42.3556523 ] } },
+{ "type": "Feature", "properties": { "NAME": "Charlestown Navy Yard Ferry Terminal", "NAME_EN": null, "OPERATOR": "MBTA", "OSM_TYPE": "node", "OSM_ID": 1146550134 }, "geometry": { "type": "Point", "coordinates": [ -71.0525492, 42.3727477 ] } },
+{ "type": "Feature", "properties": { "NAME": "Long Wharf (North) Ferry Terminal", "NAME_EN": null, "OPERATOR": "Water Transportation Alternatives", "OSM_TYPE": "node", "OSM_ID": 1146550359 }, "geometry": { "type": "Point", "coordinates": [ -71.049964100000011, 42.3607955 ] } },
+{ "type": "Feature", "properties": { "NAME": "Logan Airport Ferry Terminal", "NAME_EN": null, "OPERATOR": "Water Transportation Alternatives", "OSM_TYPE": "node", "OSM_ID": 1146550606 }, "geometry": { "type": "Point", "coordinates": [ -71.0274572, 42.3601422 ] } },
+{ "type": "Feature", "properties": { "NAME": "Long Wharf (South) Ferry Terminal", "NAME_EN": null, "OPERATOR": "MBTA", "OSM_TYPE": "node", "OSM_ID": 1146552076 }, "geometry": { "type": "Point", "coordinates": [ -71.0504562, 42.3594308 ] } },
+{ "type": "Feature", "properties": { "NAME": "EDIC Pier", "NAME_EN": null, "OPERATOR": "Economic Development Industrial Corporation", "OSM_TYPE": "node", "OSM_ID": 1146564479 }, "geometry": { "type": "Point", "coordinates": [ -71.0365264, 42.3432641 ] } },
+{ "type": "Feature", "properties": { "NAME": "Courthouse Dock", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 1146564509 }, "geometry": { "type": "Point", "coordinates": [ -71.0483209, 42.3542823 ] } },
+{ "type": "Feature", "properties": { "NAME": null, "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 2446048150 }, "geometry": { "type": "Point", "coordinates": [ -71.048484800000011, 42.3598648 ] } },
+{ "type": "Feature", "properties": { "NAME": "Central Wharf Ferry Terminal", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 2932413633 }, "geometry": { "type": "Point", "coordinates": [ -71.04856860000001, 42.3588655 ] } },
+{ "type": "Feature", "properties": { "NAME": "Georges Island Ferry Landing", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 4207605772 }, "geometry": { "type": "Point", "coordinates": [ -70.9311164, 42.3195789 ] } },
+{ "type": "Feature", "properties": { "NAME": "Thompson Island Ferry Landing", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 4207606103 }, "geometry": { "type": "Point", "coordinates": [ -71.01011, 42.31922 ] } },
+{ "type": "Feature", "properties": { "NAME": "Lovells Island Ferry Landing", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 4207606369 }, "geometry": { "type": "Point", "coordinates": [ -70.9270736, 42.3263375 ] } },
+{ "type": "Feature", "properties": { "NAME": "Fan Pier Ferry Terminal", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 4779889236 }, "geometry": { "type": "Point", "coordinates": [ -71.043181, 42.3535207 ] } },
+{ "type": "Feature", "properties": { "NAME": "Lewis Wharf Ferry Terminal", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 5434424090 }, "geometry": { "type": "Point", "coordinates": [ -71.0421216, 42.3656133 ] } },
+{ "type": "Feature", "properties": { "NAME": "World Trade Center (East) Ferry Terminal", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 6574812163 }, "geometry": { "type": "Point", "coordinates": [ -71.0404592, 42.3503165 ] } },
+{ "type": "Feature", "properties": { "NAME": "East Boston 6 New Street Ferry Landing", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 6908721264 }, "geometry": { "type": "Point", "coordinates": [ -71.0452879, 42.3711832 ] } },
+{ "type": "Feature", "properties": { "NAME": "Spectacle Island Ferry Landing", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 7624078514 }, "geometry": { "type": "Point", "coordinates": [ -70.9886352, 42.3218254 ] } },
+{ "type": "Feature", "properties": { "NAME": "Lovejoy Wharf Ferry Terminal", "NAME_EN": null, "OPERATOR": "Massachusetts Convention Center Authority (MCCA)", "OSM_TYPE": "node", "OSM_ID": 7784660200 }, "geometry": { "type": "Point", "coordinates": [ -71.0601013, 42.3674399 ] } },
+{ "type": "Feature", "properties": { "NAME": "Gate 4", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 11914323169 }, "geometry": { "type": "Point", "coordinates": [ -71.048731600000011, 42.3600531 ] } },
+{ "type": "Feature", "properties": { "NAME": "Pier 10", "NAME_EN": null, "OPERATOR": null, "OSM_TYPE": "node", "OSM_ID": 13112691226 }, "geometry": { "type": "Point", "coordinates": [ -71.0253832, 42.3450139 ] } }
+]
+}

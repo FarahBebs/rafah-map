@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "milestone-point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "NAME": "Boston 3 Miles", "NAME_EN": null, "DISTANCE": null, "SOURCE": "survey", "CHECK_DATE": null, "PK_BKWRD": null, "DIST_BKWRD": null, "DIST_FRWRD": null, "OSM_TYPE": "node", "OSM_ID": 2774136945 }, "geometry": { "type": "Point", "coordinates": [ -71.0936248, 42.3294872 ] } },
+{ "type": "Feature", "properties": { "NAME": "Boston 4 Miles", "NAME_EN": null, "DISTANCE": null, "SOURCE": null, "CHECK_DATE": null, "PK_BKWRD": null, "DIST_BKWRD": null, "DIST_FRWRD": null, "OSM_TYPE": "node", "OSM_ID": 6196867440 }, "geometry": { "type": "Point", "coordinates": [ -71.110749500000011, 42.3329278 ] } },
+{ "type": "Feature", "properties": { "NAME": "Boston 6 Miles", "NAME_EN": null, "DISTANCE": null, "SOURCE": null, "CHECK_DATE": null, "PK_BKWRD": null, "DIST_BKWRD": null, "DIST_FRWRD": null, "OSM_TYPE": "node", "OSM_ID": 6196867442 }, "geometry": { "type": "Point", "coordinates": [ -71.1316359, 42.3518067 ] } },
+{ "type": "Feature", "properties": { "NAME": "Boston 7 Miles", "NAME_EN": null, "DISTANCE": null, "SOURCE": null, "CHECK_DATE": null, "PK_BKWRD": null, "DIST_BKWRD": null, "DIST_FRWRD": null, "OSM_TYPE": "node", "OSM_ID": 6196867443 }, "geometry": { "type": "Point", "coordinates": [ -71.1301272, 42.3615993 ] } },
+{ "type": "Feature", "properties": { "NAME": "Boston Marathon Finish Line", "NAME_EN": null, "DISTANCE": "42.195", "SOURCE": null, "CHECK_DATE": null, "PK_BKWRD": null, "DIST_BKWRD": null, "DIST_FRWRD": null, "OSM_TYPE": "node", "OSM_ID": 7644779165 }, "geometry": { "type": "Point", "coordinates": [ -71.0786162, 42.3497514 ] } }
+]
+}
