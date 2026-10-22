@@ -143,16 +143,22 @@ You need Python and an internet connection for this step (elevation tiles downlo
 
 **On Windows**
 
+Use **Python 3.12 (64-bit)** from [python.org](https://www.python.org/downloads/release/python-31210/)  
+(“Windows installer (64-bit)”). On the first screen, tick **Add python.exe to PATH**, then install.  
+Newer Python versions can fail to install `rhino3dm` on Windows.
+
 1. Open the project folder.
-2. Double-click **Build Rafah Rhino.bat**.
-3. Wait until it finishes. It creates `rhino\Rafah.3dm`.
+2. If a folder named `.venv` is already there from a failed try, delete it.
+3. Double-click **Build Rafah Rhino.bat**.
+4. Wait until it prints **SUCCESS**. It creates `rhino\Rafah.3dm`.
 
-Or in a terminal:
+Or in a terminal (with Python 3.12 installed):
 
-```bash
-python3 -m venv .venv
-.venv/bin/pip install rhino3dm pillow
-.venv/bin/python rhino/export_rhino.py
+```bat
+py -3.12 -m venv .venv
+.venv\Scripts\python -m pip install --upgrade pip
+.venv\Scripts\python -m pip install --only-binary=:all: rhino3dm pillow
+.venv\Scripts\python rhino\export_rhino.py
 ```
 
 ### 2. Open the model
