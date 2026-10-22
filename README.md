@@ -126,11 +126,100 @@ To stop the map, close the Terminal window on a Mac, or the black window on Wind
 
 ## Open the same place in Rhino
 
-1. Open Rhino 7 or Rhino 8.
-2. Choose **File → Open**.
-3. Choose `rhino/Rafah.3dm` inside the downloaded folder.
+The Rhino file is built to mirror the web map: the same Map view options, similar colours, extruded buildings, and named camera views (City / Governorate / People and Heritage).
 
-The model is in meters. The flat coordinates start at 34.25°E, 31.28°N. Height is meters above sea level. The layers are Terrain, Buildings, Roads, and Boundary. A named building keeps its name on the object.
+The `.3dm` is large (about 200 MB), so it is **not stored in GitHub**. You build it once on your computer from the same data the web map uses.
+
+### 1. Build the Rhino file (once)
+
+You need Python and an internet connection for this step (elevation tiles download once).
+
+**On a Mac**
+
+1. Open the project folder.
+2. Double-click **Build Rafah Rhino.command**.
+3. If macOS blocks it, right-click → **Open** → **Open**.
+4. Wait until it finishes (a few minutes). It creates `rhino/Rafah.3dm`.
+
+**On Windows**
+
+1. Open the project folder.
+2. Double-click **Build Rafah Rhino.bat**.
+3. Wait until it finishes. It creates `rhino\Rafah.3dm`.
+
+Or in a terminal:
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install rhino3dm pillow
+.venv/bin/python rhino/export_rhino.py
+```
+
+### 2. Open the model
+
+1. Open **Rhino 7** or **Rhino 8**.
+2. Choose **File → Open**.
+3. Choose `rhino/Rafah.3dm`.
+
+Units are metres. The flat coordinates start at 34.25°E, 31.28°N. Height is metres above sea level.
+
+When the file opens it starts in the **OpenStreetMap** layout (terrain, OSM roads, boundary, OSM buildings), like the web default.
+
+### 3. Switch views (same options as the web)
+
+The web **Map view** menu is reproduced by layer groups plus a small Python script.
+
+1. In Rhino, type `EditPythonScript` and press Enter  
+   (or **Tools → PythonScript → Edit…**).
+2. Open `rhino/Set Map View.py`.
+3. Click **Run**.
+4. Pick one of:
+   - **OpenStreetMap**
+   - **Basemap (AUB)**
+   - **Damage (AUB)**
+   - **3D Map (AUB)**
+   - **People & Place (AUB)**
+   - **Heritage (AUB)**
+
+That shows and hides the same layer groups the web map turns on and off, and jumps to the matching named camera (City, Governorate, or People and Heritage).
+
+You can also toggle layers by hand in the **Layers** panel. Parent groups are:
+
+| Layer group | Matches web view |
+| --- | --- |
+| `Shared` (Terrain, Roads OSM, Boundary) | Always kept on by the script |
+| `01 OpenStreetMap` | OpenStreetMap / also used under Basemap |
+| `02 Basemap AUB` | Basemap (AUB) |
+| `03 Damage AUB` | Damage (AUB) overlays |
+| `04 3D Map AUB` | Damage-coloured extruded buildings |
+| `05 People and Place` | People & Place pins |
+| `06 Heritage` | Heritage sites and buildings |
+
+### 4. Cameras and looking around
+
+- Named views: open the viewport title menu → **Named Views**, then choose **City**, **Governorate**, or **People and Heritage** (same framing as the web City / Governorate buttons and the wider Gaza People/Heritage view).
+- Right-drag or use the mouse wheel to orbit and zoom, as usual in Rhino.
+- Click an object and open **Properties** (or use `What` / `ObjInfo`) to read its name and user-text fields (damage, theme, height, description), similar to the web popup card.
+
+### 5. What looks the same — and what is different
+
+**Same as the web**
+
+- Map view choices and layer grouping
+- OSM vs AUB damage building colours
+- People & Place theme colours (blue / green / gold)
+- Extruded 3D buildings with height
+- City / Governorate / wider Gaza framing
+
+**Different from the web**
+
+- Rhino does **not** stream the live satellite photo or the Rafah date slider. The ground is a 3D terrain mesh. Use the browser map when you need historical imagery.
+- Very dense greenhouse / damage overlays are simplified for file size; the structure and colours still match the web layers.
+- People & Place and Heritage points outside the Rafah elevation tiles sit on a flat fallback height so they still appear when you zoom out to Gaza.
+
+### 6. Rebuild after data changes
+
+Run **Build Rafah Rhino** again (or the `export_rhino.py` commands above) whenever you refresh the GeoJSON downloads and want an updated `.3dm`.
 
 ## What is in the folder
 
@@ -140,7 +229,10 @@ The model is in meters. The flat coordinates start at 34.25°E, 31.28°N. Height
 | `data/rafah/` | OpenStreetMap buildings, roads, and the governorate boundary for Rafah |
 | `data/urbicide/` | Rafah building footprints with cumulative damage (AUB 3D / damage view) |
 | `data/aub/` | Other AUB layers: basemap, damage overlays, People & Place, heritage, and damage stats |
-| `rhino/Rafah.3dm` | The Rhino model |
+| `rhino/Rafah.3dm` | Generated Rhino model (build locally; not in GitHub) |
+| `rhino/Set Map View.py` | Rhino script to switch views like the web menu |
+| `rhino/export_rhino.py` | Builds `Rafah.3dm` from the GeoJSON data |
+| `Build Rafah Rhino.command` / `.bat` | One-click builder for the Rhino file |
 | `scripts/` | Optional download scripts to refresh OSM or AUB data |
 | `data/nextgis/basemap/` | Sample roads, buildings, water, land use, and a QGIS project |
 | `data/nextgis/elevation/` | Sample elevation, hillshade, and contour lines |

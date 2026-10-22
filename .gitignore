@@ -2,3 +2,7 @@
 .venv/
 __pycache__/
 *.pyc
+
+# Generated Rhino model is large (~200MB+). Build it locally:
+#   double-click "Build Rafah Rhino.command" (Mac) or "Build Rafah Rhino.bat" (Windows)
+rhino/Rafah.3dm
