@@ -48,15 +48,79 @@ The map uses Python, which is free. You install it once.
 
 ### 4. How to use the map
 
-- Drag to move around.
-- Right-drag, or use two fingers, to tilt the view.
-- **Rafah date** picks a day from 1 Jan 2000 through today. The satellite photo changes to that time. From 2000 until early 2014 the photo is a wide view. From 20 Feb 2014 onward it is a close photo.
-- The checkboxes turn the satellite, streets, buildings, roads, boundary, and terrain on and off.
-- The sliders change how strong the hills look and how tall the buildings look.
-- **City** returns to central Rafah. **Governorate** shows the wider area. **Tilt** lays the view flat or stands it back up.
-- Click a building to see its name.
+#### Move around
 
-Buildings and roads are the current map. The date changes the satellite photo.
+- Drag to move.
+- Scroll, or pinch, to zoom.
+- Right-drag, or use two fingers, to tilt.
+- The compass control at the bottom left resets north and zoom.
+
+#### Map view
+
+At the top of the left panel, **Map view** chooses which data set you see. Roads and the Rafah boundary usually stay from OpenStreetMap. The buildings and coloured overlays change with the view.
+
+| Map view | What you see |
+| --- | --- |
+| **OpenStreetMap** | Everyday Rafah buildings and roads from OpenStreetMap. Buildings are coloured by type (house, school, mosque, and so on). |
+| **Basemap (AUB)** | Landscape layers from the AUB project: farmland, greenhouses, institutional land, coast, camps, cemetery/recreation areas, neighbourhoods, and institution points. |
+| **Damage (AUB)** | Damage overlays for Rafah — damaged roads, greenhouses, natural and institutional land, damaged buildings — plus a small **Rafah building damage** stats box. Buildings are coloured by damage level. |
+| **3D Map (AUB)** | The AUB 3D building damage view for Rafah. Buildings are extruded and coloured by cumulative damage (destroyed, severe/heavy, moderate, possible, no damage). The same stats box appears. |
+| **People & Place (AUB)** | Story points across Gaza. Colours mark the theme: disruption of socio-spatial practices, everyday resistance, or displacement. The camera opens on a wider Gaza view. |
+| **Heritage (AUB)** | Heritage sites and heritage buildings across Gaza (points and polygons). |
+
+The first time you open a heavy AUB view (especially Damage or 3D Map), the page may pause for a few seconds while the files load.
+
+The AUB views come from the public project [Tracking The Urbicide in Gaza](https://experience.arcgis.com/experience/5c24d93ffc234d709efbbeb355d9496c/page/Page?views=3D-Map) (American University of Beirut).
+
+#### What happens when you click
+
+Click a building, coloured land area, road, camp, story pin, or heritage place. A card opens at the top right.
+
+- The **title** is the best available name (building name, story title, heritage name in English, and so on).
+- If there is no real name, the card uses a clear label instead, such as the building type, farmland class, road type, or “Building · Destroyed”.
+- Under the title you usually see type, category, damage level, place, and sometimes height or a short description.
+- For People & Place stories, a longer description can appear, with a **Source** link when one exists.
+- Click another feature to replace the card. There is no separate close button; choosing a new view or clicking elsewhere on empty map space leaves the last card until the next click.
+
+#### Rafah date
+
+**Rafah date** picks a day from 1 Jan 2000 through the latest available photo. Only the **satellite photo** changes.
+
+- From 2000 until early 2014 the photo is a wide, lower-detail view.
+- From 20 Feb 2014 onward it is a closer Esri Wayback photo.
+- Buildings and roads stay on the current map data. The date does not rewind the building footprints.
+
+#### Layer checkboxes
+
+| Checkbox | What it does |
+| --- | --- |
+| **Satellite** | Shows or hides the aerial photo. |
+| **Streets** | Shows or hides the street basemap. |
+| **Buildings** | Shows or hides the 3D buildings (when that view uses them). |
+| **Roads** | Shows or hides the OpenStreetMap roads. |
+| **Boundary** | Shows or hides the Rafah governorate outline. |
+| **Terrain** | Turns ground height on or off. |
+
+#### Sliders
+
+| Slider | What it does |
+| --- | --- |
+| **Terrain relief** | How strong the hills look when terrain is on. |
+| **Building height** | Scales how tall the extruded buildings look. |
+
+#### Buttons
+
+| Button | What it does |
+| --- | --- |
+| **City** | Flies to central Rafah. |
+| **Governorate** | Zooms out to the wider Rafah area. |
+| **Tilt** | Flattens the view or tips it back into 3D. |
+
+#### Status line and credits
+
+- The line under the title (**status**) shows a short count for the current view, for example how many buildings, how many are damaged, or how many stories.
+- On Damage and 3D Map, the **Rafah building damage** box lists damaged / destroyed / severe / moderate / possible counts for Rafah, plus a one-line Gaza overall total.
+- The footer credit text updates with the current view and links to OpenStreetMap or the AUB experience.
 
 To stop the map, close the Terminal window on a Mac, or the black window on Windows.
 
@@ -73,17 +137,22 @@ The model is in meters. The flat coordinates start at 34.25°E, 31.28°N. Height
 | Folder | What is inside |
 | --- | --- |
 | `web/` | The browser map |
-| `data/rafah/` | Rafah buildings, roads, and the governorate boundary |
+| `data/rafah/` | OpenStreetMap buildings, roads, and the governorate boundary for Rafah |
+| `data/urbicide/` | Rafah building footprints with cumulative damage (AUB 3D / damage view) |
+| `data/aub/` | Other AUB layers: basemap, damage overlays, People & Place, heritage, and damage stats |
 | `rhino/Rafah.3dm` | The Rhino model |
+| `scripts/` | Optional download scripts to refresh OSM or AUB data |
 | `data/nextgis/basemap/` | Sample roads, buildings, water, land use, and a QGIS project |
 | `data/nextgis/elevation/` | Sample elevation, hillshade, and contour lines |
 | `data/nextgis/buildings/` | Sample building footprints |
 
-The NextGIS folders are free samples from [data.nextgis.com](https://data.nextgis.com/en/data-samples/#formats-base). They show how those map files are organized. They are a demo area. Rafah itself is in `data/rafah/` and `rhino/Rafah.3dm`.
+The NextGIS folders are free samples from [data.nextgis.com](https://data.nextgis.com/en/data-samples/#formats-base). They show how those map files are organized. They are a demo area. Rafah itself is in `data/rafah/` and `rhino/Rafah.3dm`. The AUB layers live in `data/urbicide/` and `data/aub/`.
 
 ## Licenses
 
 Rafah buildings, roads, and the boundary come from OpenStreetMap and are available under the [Open Database License](https://opendatacommons.org/licenses/odbl/1.0/). © OpenStreetMap contributors.
+
+The AUB views reuse public layers from [Tracking The Urbicide in Gaza](https://experience.arcgis.com/experience/5c24d93ffc234d709efbbeb355d9496c/page/Page?views=3D-Map) (American University of Beirut / ArcGIS Online). Credit that project when you use those layers.
 
 The NextGIS samples are also shared under the Open Database License. Each sample folder has a readme with the full credit for OpenStreetMap, Copernicus WorldDEM-30, Microsoft, and Google. The QGIS styles are CC BY 4.0 © NextGIS.
 

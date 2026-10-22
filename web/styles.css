@@ -84,7 +84,8 @@ h1 span {
   color: var(--muted);
 }
 
-input[type="date"] {
+input[type="date"],
+select {
   width: 100%;
   border: 1px solid var(--line);
   background: transparent;
@@ -94,9 +95,73 @@ input[type="date"] {
   font: 13px "Avenir Next", "Segoe UI", sans-serif;
 }
 
+select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 55%, calc(100% - 12px) 55%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 28px;
+}
+
+select option {
+  color: #1c1814;
+}
+
 .date-note {
   margin: 0;
   line-height: 1.35;
+}
+
+.damage-stats {
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.damage-stats .stats-title {
+  margin: 0 0 8px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.damage-stats ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.damage-stats li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 3px 0;
+  border-top: 1px solid var(--line);
+}
+
+.damage-stats li:first-child {
+  border-top: 0;
+}
+
+.damage-stats strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.damage-stats .stats-foot {
+  margin: 8px 0 0;
+  line-height: 1.35;
+}
+
+.popup-body {
+  margin-top: 8px !important;
 }
 
 .toggles {

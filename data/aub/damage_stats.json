@@ -1,0 +1,53 @@
+{
+  "source_layer": "https://services3.arcgis.com/tuNLpt6Wfhd22qmO/arcgis/rest/services/GazaBuilding_26_03_2024/FeatureServer/0",
+  "overall": {
+    "total_buildings": 403889,
+    "all_damaged": 304566,
+    "by_damage": {
+      "Destroyed": 172482,
+      "Moderate Damage": 40604,
+      "No Damage": 99323,
+      "Possible Damage": 20983,
+      "Severe Damage": 70497
+    },
+    "destroyed": 172482,
+    "severe_or_heavy": 70497,
+    "moderate": 40604,
+    "possible": 20983,
+    "no_damage": 99323,
+    "destroyed_pct": 42.7,
+    "severe_or_heavy_pct": 17.5,
+    "moderate_pct": 10.1,
+    "possible_pct": 5.2,
+    "all_damaged_pct": 75.4
+  },
+  "rafah": {
+    "total_buildings": 55661,
+    "all_damaged": 41375,
+    "by_damage": {
+      "Destroyed": 33287,
+      "Moderate Damage": 2512,
+      "No Damage": 14286,
+      "Possible Damage": 1805,
+      "Severe Damage": 3771
+    },
+    "destroyed": 33287,
+    "severe_or_heavy": 3771,
+    "moderate": 2512,
+    "possible": 1805,
+    "no_damage": 14286,
+    "destroyed_pct": 59.8,
+    "severe_or_heavy_pct": 6.8,
+    "moderate_pct": 4.5,
+    "possible_pct": 3.2,
+    "all_damaged_pct": 74.3
+  },
+  "dashboard_labels": {
+    "all_damaged": "ALL DAMAGED BUILDINGS",
+    "destroyed": "DESTROYED BUILDINGS",
+    "severe_or_heavy": "HEAVILY DAMAGED BUILDINGS",
+    "moderate": "MODERATELY DAMAGED BUILDINGS",
+    "possible": "POSSIBLY DAMAGED BUILDINGS"
+  },
+  "note": "AllDamage cumulative field. Dashboard Heavy ≈ Severe Damage."
+}

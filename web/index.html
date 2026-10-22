@@ -8,7 +8,7 @@
       href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
   <body>
     <div id="map"></div>
@@ -17,6 +17,21 @@
       <p class="eyebrow">3D map</p>
       <h1>Rafah <span lang="ar">رفح</span></h1>
       <p class="sub" id="status">Loading Rafah…</p>
+
+      <label class="date-field">
+        <span>Map view</span>
+        <select id="data-source">
+          <option value="osm" selected>OpenStreetMap</option>
+          <option value="basemap">Basemap (AUB)</option>
+          <option value="damage">Damage (AUB)</option>
+          <option value="3d-map">3D Map (AUB)</option>
+          <option value="people">People &amp; Place (AUB)</option>
+          <option value="heritage">Heritage (AUB)</option>
+        </select>
+        <p id="data-note" class="date-note">Current OpenStreetMap footprints.</p>
+      </label>
+
+      <div id="damage-stats" class="damage-stats" hidden></div>
 
       <label class="date-field">
         <span>Rafah date</span>
@@ -51,17 +66,17 @@
 
     <aside id="popup" class="popup" hidden></aside>
 
-    <footer class="credits">
+    <footer class="credits" id="credits">
       Buildings, roads, and boundary from
       <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>.
       Elevation from AWS Terrain Tiles (Terrarium).
-      Layer list follows the
-      <a href="https://data.nextgis.com/en/data-samples/#formats-base">NextGIS data samples</a>
-      catalog. The date changes the satellite photo. Buildings and roads are the current map.
-      Drag to look around. Right-drag or two fingers to tilt.
+      Extra views from
+      <a href="https://experience.arcgis.com/experience/5c24d93ffc234d709efbbeb355d9496c/page/Page?views=3D-Map">Tracking The Urbicide in Gaza</a>
+      (AUB): Basemap, Damage, 3D Map, People &amp; Place, Heritage.
+      The date changes the satellite photo.
     </footer>
 
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="app.js?v=5"></script>
+    <script src="app.js?v=10"></script>
   </body>
 </html>

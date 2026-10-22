@@ -1,0 +1,21 @@
+{
+  "place": "Rafah Governorate",
+  "place_ar": "محافظة رفح",
+  "fetched_from": {
+    "experience": "https://experience.arcgis.com/experience/5c24d93ffc234d709efbbeb355d9496c/page/Page?views=3D-Map",
+    "web_scene": "https://www.arcgis.com/home/item.html?id=e6f1cab62fda40608dee21f5081f7c60",
+    "layer": "https://services3.arcgis.com/tuNLpt6Wfhd22qmO/arcgis/rest/services/GazaBuilding_26_03_2024/FeatureServer/0",
+    "credit": "Tracking The Urbicide in Gaza — American University of Beirut (AUB) / ArcGIS Online"
+  },
+  "counts": {
+    "buildings": 55661,
+    "damage": {
+      "Destroyed": 33287,
+      "No Damage": 14286,
+      "Severe Damage": 3771,
+      "Moderate Damage": 2512,
+      "Possible Damage": 1805
+    }
+  },
+  "notes": "Building footprints and cumulative damage (AllDamage) from the public 'Tracking The Urbicide in Gaza' ArcGIS experience / Gaza3DMap_St web scene. Filtered to محافظة رفح."
+}

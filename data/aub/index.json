@@ -1,0 +1,146 @@
+{
+  "experience": "https://experience.arcgis.com/experience/5c24d93ffc234d709efbbeb355d9496c/page/Page?views=3D-Map",
+  "credit": "Tracking The Urbicide in Gaza — American University of Beirut (AUB) / ArcGIS Online",
+  "layers": {
+    "agriculture": {
+      "file": "agriculture.geojson",
+      "count": 1427,
+      "bytes": 6060282
+    },
+    "agriculture_damage": {
+      "file": "agriculture_damage.geojson",
+      "count": 0,
+      "bytes": 45
+    },
+    "camps": {
+      "file": "camps.geojson",
+      "count": 12,
+      "bytes": 2015
+    },
+    "cemetery_recreation": {
+      "file": "cemetery_recreation.geojson",
+      "count": 82,
+      "bytes": 90917
+    },
+    "coast": {
+      "file": "coast.geojson",
+      "count": 3,
+      "bytes": 55983
+    },
+    "damaged_buildings_pts": {
+      "file": "damaged_buildings_pts.geojson",
+      "count": 8000,
+      "bytes": 3977383
+    },
+    "greenhouse_damage": {
+      "file": "greenhouse_damage.geojson",
+      "count": 36000,
+      "bytes": 15426926
+    },
+    "greenhouses": {
+      "file": "greenhouses.geojson",
+      "count": 24033,
+      "bytes": 8993152
+    },
+    "heritage_buildings": {
+      "file": "heritage_buildings.geojson",
+      "count": 528,
+      "bytes": 400172
+    },
+    "heritage_buildings_poly": {
+      "file": "heritage_buildings_poly.geojson",
+      "count": 792,
+      "bytes": 757254
+    },
+    "heritage_sites": {
+      "file": "heritage_sites.geojson",
+      "count": 80,
+      "bytes": 57056
+    },
+    "heritage_sites_poly": {
+      "file": "heritage_sites_poly.geojson",
+      "count": 80,
+      "bytes": 101407
+    },
+    "institutional_building_damage": {
+      "file": "institutional_building_damage.geojson",
+      "count": 22880,
+      "bytes": 18020448
+    },
+    "institutional_damage": {
+      "file": "institutional_damage.geojson",
+      "count": 768,
+      "bytes": 1449789
+    },
+    "institutional_land": {
+      "file": "institutional_land.geojson",
+      "count": 192,
+      "bytes": 350734
+    },
+    "institutions": {
+      "file": "institutions.geojson",
+      "count": 265,
+      "bytes": 103482
+    },
+    "natural_damage": {
+      "file": "natural_damage.geojson",
+      "count": 22,
+      "bytes": 7567
+    },
+    "neighborhoods": {
+      "file": "neighborhoods.geojson",
+      "count": 7,
+      "bytes": 49979
+    },
+    "people_and_place": {
+      "file": "people_and_place.geojson",
+      "count": 74,
+      "bytes": 259822
+    },
+    "road_damage": {
+      "file": "road_damage.geojson",
+      "count": 15842,
+      "bytes": 8144549
+    },
+    "buildings": {
+      "file": "../urbicide/buildings.geojson",
+      "count": 55661,
+      "bytes": 22009942
+    }
+  },
+  "damage_stats": "damage_stats.json",
+  "views": {
+    "basemap": [
+      "agriculture",
+      "greenhouses",
+      "institutional_land",
+      "coast",
+      "camps",
+      "cemetery_recreation",
+      "neighborhoods",
+      "institutions"
+    ],
+    "damage": [
+      "agriculture_damage",
+      "natural_damage",
+      "institutional_damage",
+      "greenhouse_damage",
+      "road_damage",
+      "damaged_buildings_pts",
+      "institutional_building_damage",
+      "buildings"
+    ],
+    "3d_map": [
+      "buildings"
+    ],
+    "people_and_place": [
+      "people_and_place"
+    ],
+    "heritage": [
+      "heritage_sites_poly",
+      "heritage_sites",
+      "heritage_buildings",
+      "heritage_buildings_poly"
+    ]
+  }
+}
